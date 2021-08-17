@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include slnee_monitoring *.css
+recursive-include slnee_monitoring *.csv
+recursive-include slnee_monitoring *.html
+recursive-include slnee_monitoring *.ico
+recursive-include slnee_monitoring *.js
+recursive-include slnee_monitoring *.json
+recursive-include slnee_monitoring *.md
+recursive-include slnee_monitoring *.png
+recursive-include slnee_monitoring *.py
+recursive-include slnee_monitoring *.svg
+recursive-include slnee_monitoring *.txt
+recursive-exclude slnee_monitoring *.pyc
