@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-08-19 01:58:01.003947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "monitoring_subject",
+  "remarks",
+  "suggestions",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "NOTE-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "NOTE-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "monitoring_subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Monitoring Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "suggestions",
+   "fieldtype": "Text",
+   "label": "Suggestions"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Remarks And Suggestions",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-08-19 01:58:58.857526",
+ "modified_by": "Administrator",
+ "module": "Slnee Monitoring",
+ "name": "Remarks And Suggestions",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "monitoring_subject",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "monitoring_subject",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

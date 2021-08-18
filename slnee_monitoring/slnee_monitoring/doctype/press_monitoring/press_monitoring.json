@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-08-17 19:10:48.543991",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "publish_date",
+  "content_item",
+  "item_name",
+  "column_break_4",
+  "content_overall_rating",
+  "subject",
+  "column_break_7",
+  "journal",
+  "journal_name",
+  "journal_logo",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "PRESS-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "PRESS-",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "content_item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "content_overall_rating",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Content Overall Rating",
+   "options": "\nPositive\nNegative\nNeutral"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Small Text",
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "journal",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Journal",
+   "options": "Journal",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "journal.journal_name",
+   "fieldname": "journal_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Journal Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "journal.journal_logo",
+   "fieldname": "journal_logo",
+   "fieldtype": "Attach Image",
+   "label": "Journal Logo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Press Monitoring",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Publish Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "content_item",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Content Item",
+   "options": "Content Item",
+   "reqd": 1
+  }
+ ],
+ "image_field": "journal_logo",
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-08-19 01:48:23.388140",
+ "modified_by": "Administrator",
+ "module": "Slnee Monitoring",
+ "name": "Press Monitoring",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "subject, journal_name, item_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "subject",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

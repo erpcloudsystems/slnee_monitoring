@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-08-18 11:52:23.127715",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "problem_classification",
+  "classification_name",
+  "overall_tweet_classification",
+  "tweet_classification",
+  "column_break_6",
+  "tweet_date",
+  "tweet_link",
+  "tweet_subject",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "SM-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "SM-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "problem_classification",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Problem Classification",
+   "options": "Problem Classification",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "problem_classification.name1",
+   "fieldname": "classification_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Problem Classification",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overall_tweet_classification",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Overall Tweet Classification",
+   "options": "\nPositive\nNegative\nNeutral",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tweet_classification",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tweet Classification",
+   "options": "\nClaims\nReporting\nQueries\nSuggestions\nThanks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tweet_subject",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Tweet Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tweet_link",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Tweet Link",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "tweet_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Tweet Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Social Media Monitoring",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-08-18 12:31:49.501978",
+ "modified_by": "Administrator",
+ "module": "Slnee Monitoring",
+ "name": "Social Media Monitoring",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "tweet_subject",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
