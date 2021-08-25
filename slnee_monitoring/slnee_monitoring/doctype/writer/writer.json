@@ -2,31 +2,40 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:item_name",
- "creation": "2021-08-17 18:35:13.742590",
+ "autoname": "naming_series:",
+ "creation": "2021-08-25 15:57:30.415033",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "item_name"
+  "naming_series",
+  "writer_name"
  ],
  "fields": [
   {
+   "default": "WRITER-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "WRITER-",
+   "read_only": 1
+  },
+  {
    "allow_in_quick_entry": 1,
-   "fieldname": "item_name",
+   "fieldname": "writer_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Item Name",
-   "reqd": 1,
-   "unique": 1
+   "label": "Writer Name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-08-25 16:59:19.275528",
+ "modified": "2021-08-25 15:57:30.415033",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
- "name": "Content Item",
+ "name": "Writer",
  "owner": "Administrator",
  "permissions": [
   {
@@ -45,7 +54,7 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "item_name",
+ "title_field": "writer_name",
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1

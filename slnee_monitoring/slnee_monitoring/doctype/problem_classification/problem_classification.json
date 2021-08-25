@@ -2,37 +2,28 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "field:name1",
  "creation": "2021-08-18 11:37:39.889719",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
   "name1"
  ],
  "fields": [
-  {
-   "default": "PROB-",
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": "PROB-",
-   "read_only": 1
-  },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "name1",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Classification Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-08-18 11:56:23.045922",
+ "modified": "2021-08-25 17:03:01.058316",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Problem Classification",

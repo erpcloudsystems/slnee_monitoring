@@ -15,6 +15,7 @@
   "tweet_date",
   "tweet_link",
   "tweet_subject",
+  "agency",
   "amended_from"
  ],
  "fields": [
@@ -95,12 +96,20 @@
   {
    "fieldname": "column_break_6",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "agency",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Agency",
+   "options": "Department",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-08-18 12:31:49.501978",
+ "modified": "2021-08-19 15:35:00.728139",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Social Media Monitoring",
