@@ -12,11 +12,13 @@
   "publish_date",
   "content_item",
   "content_overall_rating",
+  "importance",
   "column_break_4",
   "journal",
   "journal_name",
   "journal_logo",
   "subject",
+  "tag",
   "column_break_7",
   "url",
   "writer",
@@ -131,13 +133,26 @@
    "fieldtype": "Data",
    "label": "Writer Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "importance",
+   "fieldtype": "Select",
+   "label": "Importance",
+   "options": "\nUrgent\nImportant\nNormal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tag",
+   "fieldtype": "Link",
+   "label": "Tag",
+   "options": "Tag Name"
   }
  ],
  "image_field": "journal_logo",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-08-25 16:58:13.462628",
+ "modified": "2021-08-29 20:27:17.615460",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Press Monitoring",

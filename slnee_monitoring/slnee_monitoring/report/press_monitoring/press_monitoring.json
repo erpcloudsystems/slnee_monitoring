@@ -1,0 +1,41 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-08-29 13:12:21.176984",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-08-29 13:12:21.176984",
+ "modified_by": "Administrator",
+ "module": "Slnee Monitoring",
+ "name": "Press Monitoring",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Press Monitoring",
+ "report_name": "Press Monitoring",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Media Employee"
+  },
+  {
+   "role": "Media Supervisor"
+  },
+  {
+   "role": "Agency Employee"
+  },
+  {
+   "role": "Agency Manager"
+  },
+  {
+   "role": "Monitoring System Manager"
+  }
+ ]
+}

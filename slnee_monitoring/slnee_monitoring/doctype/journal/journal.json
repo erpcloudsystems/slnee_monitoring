@@ -53,8 +53,13 @@
  ],
  "image_field": "journal_logo",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2021-08-17 18:29:08.550388",
+ "links": [
+  {
+   "link_doctype": "Press Monitoring",
+   "link_fieldname": "journal"
+  }
+ ],
+ "modified": "2021-08-29 20:38:31.801662",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Journal",

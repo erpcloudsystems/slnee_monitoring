@@ -53,8 +53,13 @@
  ],
  "image_field": "channel_logo",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2021-08-19 00:59:55.775477",
+ "links": [
+  {
+   "link_doctype": "Satellite Channels Monitoring",
+   "link_fieldname": "satellite_channel"
+  }
+ ],
+ "modified": "2021-08-29 20:40:40.841679",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Satellite Channel",

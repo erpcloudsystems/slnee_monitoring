@@ -8,13 +8,14 @@
  "field_order": [
   "naming_series",
   "problem_classification",
-  "classification_name",
   "overall_tweet_classification",
   "tweet_classification",
+  "importance",
   "column_break_6",
   "tweet_date",
   "tweet_link",
   "tweet_subject",
+  "tag",
   "agency",
   "amended_from"
  ],
@@ -35,14 +36,6 @@
    "label": "Problem Classification",
    "options": "Problem Classification",
    "reqd": 1
-  },
-  {
-   "fetch_from": "problem_classification.name1",
-   "fieldname": "classification_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Problem Classification",
-   "read_only": 1
   },
   {
    "fieldname": "overall_tweet_classification",
@@ -104,12 +97,25 @@
    "label": "Agency",
    "options": "Department",
    "reqd": 1
+  },
+  {
+   "fieldname": "importance",
+   "fieldtype": "Select",
+   "label": "Importance",
+   "options": "\nUrgent\nImportant\nNormal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tag",
+   "fieldtype": "Link",
+   "label": "Tag",
+   "options": "Tag Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-08-19 15:35:00.728139",
+ "modified": "2021-08-29 20:27:40.802751",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Social Media Monitoring",
