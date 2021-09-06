@@ -60,6 +60,15 @@
   },
   {
    "hidden": 0,
+   "is_query_report": 0,
+   "label": "Service Classification",
+   "link_to": "Service Classification",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
    "is_query_report": 1,
    "label": "Press Monitoring Report",
    "link_to": "Press Monitoring",
@@ -146,7 +155,7 @@
    "type": "Link"
   }
  ],
- "modified": "2021-08-29 14:20:05.363196",
+ "modified": "2021-09-06 13:41:52.609169",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Slnee Monitoring",

@@ -11,6 +11,7 @@
   "naming_series",
   "publish_date",
   "content_item",
+  "service_classification",
   "content_overall_rating",
   "importance",
   "column_break_4",
@@ -146,13 +147,20 @@
    "fieldtype": "Link",
    "label": "Tag",
    "options": "Tag Name"
+  },
+  {
+   "fieldname": "service_classification",
+   "fieldtype": "Link",
+   "label": "Service Classification",
+   "options": "Service Classification",
+   "reqd": 1
   }
  ],
  "image_field": "journal_logo",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-08-29 20:27:17.615460",
+ "modified": "2021-09-06 13:39:40.604466",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Press Monitoring",

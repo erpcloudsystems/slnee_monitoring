@@ -2,41 +2,31 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
- "creation": "2021-08-25 15:57:30.415033",
+ "autoname": "field:service_name",
+ "creation": "2021-09-06 13:37:02.094590",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
-  "writer_name"
+  "service_name"
  ],
  "fields": [
   {
-   "default": "WRITER-",
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Naming Series",
-   "options": "WRITER-",
-   "read_only": 1
-  },
-  {
    "allow_in_quick_entry": 1,
-   "fieldname": "writer_name",
+   "fieldname": "service_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Writer Name",
+   "label": "Service Name",
    "reqd": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-08-29 20:45:55.943006",
+ "modified": "2021-09-06 13:37:02.094590",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
- "name": "Writer",
+ "name": "Service Classification",
  "owner": "Administrator",
  "permissions": [
   {
@@ -55,7 +45,7 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "writer_name",
+ "title_field": "service_name",
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1
