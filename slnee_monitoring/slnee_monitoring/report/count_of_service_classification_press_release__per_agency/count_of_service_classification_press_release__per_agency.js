@@ -1,8 +1,5 @@
-// Copyright (c) 2016, erpcloud.systems and contributors
-// For license information, please see license.txt
-/* eslint-disable */
 
-frappe.query_reports["Press Monitoring"] = {
+frappe.query_reports["Count Of Service Classification press release  per agency"] = {
 	"filters": [
 		{
 			"fieldname": "from_date",
@@ -19,13 +16,13 @@ frappe.query_reports["Press Monitoring"] = {
 			"reqd": 1
 		},
 		{
-			"fieldname":"journal",
-			"label": __("Journal"),
+			"fieldname": "service_classification",
+			"label": __("Service Classification"),
 			"fieldtype": "Link",
-			"options" : "Journal",
+			"options" : "Service Classification",
 			"reqd": 0
 		}
+
 	]
 }
-
 

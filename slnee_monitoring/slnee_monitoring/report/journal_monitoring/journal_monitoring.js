@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Press Monitoring"] = {
+frappe.query_reports["Journal Monitoring"] = {
 	"filters": [
 		{
 			"fieldname": "from_date",
@@ -18,14 +18,13 @@ frappe.query_reports["Press Monitoring"] = {
 			"default": frappe.defaults.get_user_default("year_end_date"),
 			"reqd": 1
 		},
+
 		{
-			"fieldname":"journal",
-			"label": __("Journal"),
+			"fieldname":"agency",
+			"label": __("Agency"),
 			"fieldtype": "Link",
-			"options" : "Journal",
+			"options" : "Agency",
 			"reqd": 0
 		}
 	]
 }
-
-

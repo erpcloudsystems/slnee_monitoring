@@ -4,7 +4,7 @@
  "charts": [],
  "creation": "2021-08-17 19:36:24.647117",
  "developer_mode_only": 0,
- "disable_user_customization": 0,
+ "disable_user_customization": 1,
  "docstatus": 0,
  "doctype": "Workspace",
  "extends_another_page": 0,
@@ -153,9 +153,159 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u062a\u0642\u0627\u0631\u064a\u0631 \u0627\u0644\u0645\u062a\u0627\u0628\u0639\u0629 \u0627\u0644\u0635\u062d\u0641\u064a\u0629",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Press Monitoring 2",
+   "link_to": "Press Monitoring 2",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Journal Monitoring",
+   "link_to": "Journal Monitoring",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Journal Monitoring 2",
+   "link_to": "Journal Monitoring 2",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Count Of Service Classification press release  per agency",
+   "link_to": "Count Of Service Classification press release  per agency",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Count Of Service Classification press release  per journal",
+   "link_to": "Count Of Service Classification press release  per journal",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u062a\u0642\u0627\u0631\u064a\u0631 \u0627\u0644\u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u0646\u0648\u0639\u064a \u0644\u0644\u0635\u062d\u0641",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "qualitative analysis of news 1",
+   "link_to": "qualitative analysis of news 1",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Most published newspaper",
+   "link_to": "Most published newspaper",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Most published newspaper (postive)",
+   "link_to": "Most published newspaper (postive)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Most published newspaper (neutral)",
+   "link_to": "Most published newspaper (neutral)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Most published newspaper (negative)",
+   "link_to": "Most published newspaper (negative)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u062a\u0642\u0627\u0631\u064a\u0631 \u0627\u0644\u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u0646\u0648\u0639\u064a \u0644\u0644\u0643\u062a\u0627\u0628",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Qualitative analysis of opinion writers",
+   "link_to": "Qualitative analysis of opinion writers",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Most writers Negative",
+   "link_to": "Most writers Negative",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Most writers Netural",
+   "link_to": "Most writers Netural",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Most Writers Positive",
+   "link_to": "Most Writers Positive",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2021-09-06 13:41:52.609169",
+ "modified": "2021-09-19 11:45:21.983661",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Slnee Monitoring",

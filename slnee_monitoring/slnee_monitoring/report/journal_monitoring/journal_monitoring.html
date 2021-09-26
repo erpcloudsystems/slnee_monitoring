@@ -1,0 +1,42 @@
+
+<img src="/files/mylast.png" width = 100%; height="600"; >
+
+<h2 class="text-center" style="font-family:Cairo">{%= __("تصنيف المواد الصحفية المنشوره عن كل جهة ") %}</h2>
+
+<h5 class="text-center" style="font-family:Cairo">
+<b>	{%= __("خلال الفترة من ") %}</b>
+	{%= frappe.datetime.str_to_user(filters.from_date) %}
+<b>{%= __("إلى") %}</b>
+	{%= frappe.datetime.str_to_user(filters.to_date) %}
+</h5>
+<hr>
+
+<table class="table table-bordered" style="font-family:Cairo" bgcolor="green" dir="rtl">
+	<thead>
+		    <tr>
+
+			<th class="text-center">{%= __("Count of Press Release") %}</th>
+			<th class="text-center">{%= __("Count of Articles") %}</th>
+			<th class="text-center">{%= __("Count of Press Report") %}</th>
+			<th class="text-center">{%= __("Service Classification") %}</th>
+			<th class="text-center">{%= __("Number of Neutral Press") %}</th>
+			<th class="text-center">{%= __("Number of Positive Press") %}</th>
+			<th class="text-center">{%= __("Number of Negative Press") %}</th>
+
+		</tr>
+	</thead>
+	<tbody>
+	{% for(var i=0, l=data.length; i<l; i++) { %}
+	<tr>
+		<td class="text-center">{%= data[i].count_of_press_release %}</td>
+		<td class="text-center">{%= __(data[i].articles) %}</td>
+		<td class="text-center">{%= data[i].count_of_press_report %}</td>
+		<td class="text-center">{%= data[i].service_classification %}</td>
+		<td align="center" style="color:blue;">{%= data[i].number_of_neutral_press %}</td>
+		<td align="center" style="color:green;">{%= data[i].number_of_positive_press %}</td>
+		<td align="center" style="color:red;">{%= data[i].number_of_negative_press %}</td>
+
+	</tr>
+	{% } %}
+	</tbody>
+</table>

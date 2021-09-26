@@ -112,7 +112,7 @@
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Agency",
-   "options": "Department",
+   "options": "Agency",
    "reqd": 1
   },
   {
@@ -126,6 +126,7 @@
    "fieldname": "url",
    "fieldtype": "Data",
    "label": "URL",
+   "length": 500,
    "reqd": 1
   },
   {
@@ -160,7 +161,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-06 13:39:40.604466",
+ "modified": "2021-09-26 13:22:21.162457",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Press Monitoring",

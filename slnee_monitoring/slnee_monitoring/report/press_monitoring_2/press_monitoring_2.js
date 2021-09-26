@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Press Monitoring"] = {
+frappe.query_reports["Press Monitoring 2"] = {
 	"filters": [
 		{
 			"fieldname": "from_date",
@@ -27,5 +27,6 @@ frappe.query_reports["Press Monitoring"] = {
 		}
 	]
 }
+
 
 

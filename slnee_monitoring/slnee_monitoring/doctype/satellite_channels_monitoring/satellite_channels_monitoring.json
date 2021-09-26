@@ -108,7 +108,7 @@
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Agency",
-   "options": "Department",
+   "options": "Agency",
    "reqd": 1
   },
   {
@@ -129,7 +129,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-08-29 20:25:45.601647",
+ "modified": "2021-09-26 13:22:37.294173",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Satellite Channels Monitoring",

@@ -1,8 +1,5 @@
-// Copyright (c) 2016, erpcloud.systems and contributors
-// For license information, please see license.txt
-/* eslint-disable */
 
-frappe.query_reports["Press Monitoring"] = {
+frappe.query_reports["Journal Monitoring 2"] = {
 	"filters": [
 		{
 			"fieldname": "from_date",
@@ -18,6 +15,7 @@ frappe.query_reports["Press Monitoring"] = {
 			"default": frappe.defaults.get_user_default("year_end_date"),
 			"reqd": 1
 		},
+
 		{
 			"fieldname":"journal",
 			"label": __("Journal"),
@@ -27,5 +25,4 @@ frappe.query_reports["Press Monitoring"] = {
 		}
 	]
 }
-
 

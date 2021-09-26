@@ -16,7 +16,7 @@
   "tweet_link",
   "tweet_subject",
   "tag",
-  "agency",
+  "agency_",
   "amended_from"
  ],
  "fields": [
@@ -91,14 +91,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "agency",
-   "fieldtype": "Link",
-   "in_standard_filter": 1,
-   "label": "Agency",
-   "options": "Department",
-   "reqd": 1
-  },
-  {
    "fieldname": "importance",
    "fieldtype": "Select",
    "label": "Importance",
@@ -110,12 +102,20 @@
    "fieldtype": "Link",
    "label": "Tag",
    "options": "Tag Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "agency_",
+   "fieldtype": "Link",
+   "label": "Agency",
+   "options": "Agency",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-08-29 20:27:40.802751",
+ "modified": "2021-09-26 13:32:21.279015",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Social Media Monitoring",

@@ -22,72 +22,28 @@ def get_columns():
             "options": "Press Monitoring",
             "width": 125
         },
-        {
-            "label": _("Workflow State"),
-            "fieldname": _("workflow_state"),
-            "fieldtype": "Data",
-            "width": 140
-        },
-		{
-			"label": _("Publish Date"),
-			"fieldname": "publish_date",
-			"fieldtype": "Date",
-			"width": 120
-		},
-        {
-            "label": _("Content Item"),
-            "fieldname": _("content_item"),
-            "fieldtype": "Data",
-            "width": 100
-        },
-        {
-            "label": _("Content Overall Rating"),
-            "fieldname": _("content_overall_rating"),
-            "fieldtype": "Data",
-            "width": 220
-        },
-        {
-            "label": _("Journal Name"),
-            "fieldname": "journal_name",
-            "fieldtype": "Data",
-            "width": 200
-        },
-        {
-            "label": _("Journal Logo"),
-            "fieldname": "journal_logo",
-            "fieldtype": "Data",
-            "width": 200
-        },
-        {
-            "label": _("Title"),
-            "fieldname": "subject",
-            "fieldtype": "Data",
-            "width": 200
-        },
-        {
-            "label": _("URL"),
-            "fieldname": "url",
-            "fieldtype": "Data",
-            "width": 230
-        },
-        {
-            "label": _("Writer Name"),
-            "fieldname": "writer_name",
-            "fieldtype": "Data",
-            "width": 170
-        },
+
         {
             "label": _("Agency"),
             "fieldname": "agency",
             "fieldtype": "Data",
+            "options": "Agency",
             "width": 260
         },
         {
-            "label": _("Monitoring Time"),
-            "fieldname": "creation",
-            "fieldtype": "Date",
-            "width": 180
+            "label": _("Service Classification"),
+            "fieldname": "service_classification",
+            "fieldtype": "Link",
+			"options": "Service Classification",
+			"width": 180
         },
+		{
+			"label": _("Content Overall Rating"),
+			"fieldname": "content_overall_rating",
+			"fieldtype": "Link",
+			"options": "Content Overall Rating",
+			"width": 180
+		},
 		{
 			"label": _("Monitored By"),
 			"fieldname": "full_name",

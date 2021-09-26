@@ -1,0 +1,41 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-09-11 14:53:20.678071",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-09-11 14:53:20.678071",
+ "modified_by": "Administrator",
+ "module": "Slnee Monitoring",
+ "name": "\u0627\u0644\u0645\u062a\u0627\u0628\u0639\u0627\u062a \u0627\u0644\u0635\u062d\u0641\u064a\u0629",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Press Monitoring",
+ "report_name": "\u0627\u0644\u0645\u062a\u0627\u0628\u0639\u0627\u062a \u0627\u0644\u0635\u062d\u0641\u064a\u0629",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Media Employee"
+  },
+  {
+   "role": "Media Supervisor"
+  },
+  {
+   "role": "Agency Employee"
+  },
+  {
+   "role": "Agency Manager"
+  },
+  {
+   "role": "Monitoring System Manager"
+  }
+ ]
+}
