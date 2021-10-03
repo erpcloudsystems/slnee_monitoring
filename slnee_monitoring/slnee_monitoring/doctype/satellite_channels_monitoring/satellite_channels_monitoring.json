@@ -12,6 +12,7 @@
   "publish_date",
   "content_item",
   "importance",
+  "link_2",
   "column_break_4",
   "content_overall_rating",
   "subject",
@@ -100,8 +101,7 @@
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Content Item",
-   "options": "Content Item",
-   "reqd": 1
+   "options": "Content Item 2"
   },
   {
    "fieldname": "agency",
@@ -123,13 +123,20 @@
    "fieldtype": "Link",
    "label": "Tag",
    "options": "Tag Name"
+  },
+  {
+   "fieldname": "link_2",
+   "fieldtype": "Data",
+   "label": "Link",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "image_field": "channel_logo",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-26 13:22:37.294173",
+ "modified": "2021-10-03 14:15:35.291663",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Satellite Channels Monitoring",

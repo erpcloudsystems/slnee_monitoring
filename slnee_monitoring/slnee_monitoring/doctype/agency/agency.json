@@ -8,7 +8,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "agency_name"
+  "agency_name",
+  "main_classification",
+  "sub_classification"
  ],
  "fields": [
   {
@@ -19,11 +21,25 @@
    "label": "Agency Name",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "main_classification",
+   "fieldtype": "Select",
+   "label": "Main Classification",
+   "options": "\n\u0628\u0644\u062f\u064a\u0629 \u0641\u0631\u0639\u064a\u0629\n\u0625\u062e\u0631\u064a"
+  },
+  {
+   "depends_on": "eval:doc.main_classification==\"\u0628\u0644\u062f\u064a\u0629 \u0641\u0631\u0639\u064a\u0629\"",
+   "fieldname": "sub_classification",
+   "fieldtype": "Select",
+   "label": "Sub Classification",
+   "mandatory_depends_on": "eval:doc.main_classification==\"\u0628\u0644\u062f\u064a\u0629 \u0641\u0631\u0639\u064a\u0629\"",
+   "options": "\n\u0623\n\u0628\n\u062c\n\u062f"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-26 13:03:43.496630",
+ "modified": "2021-10-03 14:01:16.706462",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Agency",

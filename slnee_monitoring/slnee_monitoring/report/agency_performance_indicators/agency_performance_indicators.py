@@ -55,6 +55,11 @@ def get_columns():
 		}
 	]
 
+def get_item_price_qty_data(filters):
+	conditions = ""
+	if filters.get("agency"):
+		conditions += " and a.name =%(agency)s"
+
 def get_chart_data(data):
 	labels = []
 	positive = []
@@ -88,7 +93,7 @@ def get_chart_data(data):
 		"type": "bar",
 		"colors": ["green", "blue", "red"],
 		"barOptions": {
-			"stacked": True
+			"stacked": False
 		}
 	}
 

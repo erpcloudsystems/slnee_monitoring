@@ -131,8 +131,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Content Item",
-   "link_to": "Content Item",
+   "label": "Content Item ",
+   "link_to": "Content Item 2",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -305,7 +305,7 @@
    "type": "Link"
   }
  ],
- "modified": "2021-09-19 11:45:21.983661",
+ "modified": "2021-10-03 13:56:47.998041",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Slnee Monitoring",
