@@ -1,14 +1,60 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: left;
+  color: white;
+    direction: rtl;
 
-<img src="/files/last3.PNG" width = 100%; height="600"; >
+}
 
-<h2 class="text-center" style="font-family:Cairo">{%= __("تصنيف المواد الصحفية المنشوره عن كل جهة ") %}</h2>
 
-<h5 class="text-center" style="font-family:Cairo">
-<b>	{%= __("خلال الفترة من ") %}</b>
-	{%= frappe.datetime.str_to_user(filters.from_date) %}
-<b>{%= __("إلى") %}</b>
+.centered {
+  position: absolute;
+  top: 65%;
+  left: 19%;
+  transform: translate(-50%, -50%);
+    text-align: left;
+  direction: rtl;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+	<br>
+<img src="/files/4dbd9fa2-bd46-46ba-9f73-2c2eb97a4189.jpg" alt="HTML5 Icon" width="100%" height="980">
+
+  <div class="centered"><h3 class="text-center" style="font-family:Cairo">{%= __("تصنيف المواد الصحفية المنشوره عن كل جهة ") %}</h3>
+<br>
+ <div class="centered"><h5 class="text-center" style="font-family:Cairo">
+	<br>
+	{%= __("خلال الفترة من ") %}
+	 {%= frappe.datetime.str_to_user(filters.from_date) %}
+     {%= __("إلى") %}
 	{%= frappe.datetime.str_to_user(filters.to_date) %}
+	<br>
+	{% if (filters.agency) { %}
+	{%= __("الجهه:") %}
+		{%= (filters.agency) %}
+	{% } %}
+
 </h5>
+</div>
+
+</div>
+</div>
+<br>
+
+
+
+
 <hr>
 
 <table class="table table-bordered" style="font-family:Cairo" bgcolor="green" dir="rtl">
@@ -39,5 +85,13 @@
 	</tr>
 	{% } %}
 	</tbody>
+
 </table>
-<img src="/files/mylast2.PNG" width = 100%; height="600"; >
+
+<div class="container">
+	<br><br><br><br><br><br><br><br><br>
+	<p></p>
+<img src="/files/mylast2.PNG" alt="HTML5 Icon" width="100%" height="1000">
+</div>
+</body>
+</html>

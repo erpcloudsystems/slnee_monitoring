@@ -58,6 +58,8 @@ def get_item_price_qty_data(filters):
 				where
 				a.docstatus != 2
 				{conditions}
+				ORDER BY count_of_press_monitiring DESC;
+
 
 				""".format(conditions=conditions), filters, as_dict=1)
 

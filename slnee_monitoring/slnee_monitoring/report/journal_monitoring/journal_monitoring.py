@@ -89,16 +89,17 @@ def get_item_price_qty_data(filters):
 				select distinct
 						a.service_classification as service_classification,
 						(select count(name) from `tabPress Monitoring` b where b.content_item ='خبر' and a.service_classification = b.service_classification {conditions} ) as count_of_press_release,
-						(select count(name) from `tabPress Monitoring` c where c.content_item ='مقالات' and a.service_classification = c.service_classification {conditions} ) as articles,
+						(select count(name) from `tabPress Monitoring` c where c.content_item ='مقال' and a.service_classification = c.service_classification {conditions} ) as articles,
 						(select count(name) from `tabPress Monitoring` f where f.content_item ='تحقيق' and a.service_classification = f.service_classification {conditions} ) as count_of_press_report,
-						(select count(name) from `tabPress Monitoring` e where e.content_overall_rating ='Negative' and e.content_item in ('خبر','مقالات','تحقيق') and a.service_classification = e.service_classification {conditions} ) as number_of_negative_press,
-						(select count(name) from `tabPress Monitoring` s where s.content_overall_rating ='Positive' and s.content_item in ('خبر','مقالات','تحقيق') and a.service_classification = s.service_classification {conditions} ) as number_of_positive_press,
-						(select count(name) from `tabPress Monitoring` w where w.content_overall_rating ='Neutral' and w.content_item in ('خبر','مقالات','تحقيق') and a.service_classification = w.service_classification {conditions} ) as number_of_neutral_press
+						(select count(name) from `tabPress Monitoring` e where e.content_overall_rating ='Negative' and e.content_item in ('خبر','مقال','تحقيق') and a.service_classification = e.service_classification {conditions} ) as number_of_negative_press,
+						(select count(name) from `tabPress Monitoring` s where s.content_overall_rating ='Positive' and s.content_item in ('خبر','مقال','تحقيق') and a.service_classification = s.service_classification {conditions} ) as number_of_positive_press,
+						(select count(name) from `tabPress Monitoring` w where w.content_overall_rating ='Neutral' and w.content_item in ('خبر','مقال','تحقيق') and a.service_classification = w.service_classification {conditions} ) as number_of_neutral_press
 				from
 				`tabPress Monitoring` a
 
 				where
-				a.docstatus != 2
+				(select count(name) from `tabPress Monitoring` c where c.content_item ='مقال' and a.service_classification = c.service_classification {conditions} ) > 0
+				and a.docstatus != 2
 				{conditions}
 
 				""".format(conditions=conditions), filters, as_dict=1)
@@ -116,7 +117,7 @@ def get_item_price_qty_data(filters):
                 'count_of_press_release': item_dict.count_of_press_release,
                 'articles': item_dict.articles,
                 'count_of_press_report': item_dict.count_of_press_report,
-                'number_of_negative_press': item_dict.number_of_negative_press,
+                'number_of_negative_press': item_dict.number_of_negative_press ,
                 'number_of_positive_press': item_dict.number_of_positive_press,
                 'number_of_neutral_press': item_dict.number_of_neutral_press,
                 'service_classification': item_dict.service_classification,

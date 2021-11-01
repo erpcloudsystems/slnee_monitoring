@@ -16,7 +16,13 @@ def execute(filters=None):
 def get_columns():
     return [
         {
-            "label": _("Writer Name"),
+            "label": _("Writer 2"),
+            "fieldname": "writer_2",
+            "fieldtype": "Data",
+            "width": 180
+        },
+        {
+            "label": _("Writer / Editor Name"),
             "fieldname": "writer_name",
             "fieldtype": "Data",
             "width": 180
@@ -29,8 +35,8 @@ def get_columns():
         },
 
         {
-            "label": _("Number of Positive Press"),
-            "fieldname": "number_of_positive_press",
+            "label": _("Number of Negative Press"),
+            "fieldname": "number_of_negative_press",
             "fieldtype": "Int",
             "width": 180
         }
@@ -50,22 +56,27 @@ def get_item_price_qty_data(filters):
         conditions += " and a.publish_date>=%(from_date)s"
     if filters.get("to_date"):
         conditions += " and a.publish_date<=%(to_date)s"
-    if filters.get("journal"):
-        conditions += " and a.journal =%(journal)s"
+    if filters.get("writer_2"):
+        conditions += " and a.writer_2 =%(writer_2)s"
     if filters.get("writer"):
         conditions += " and a.writer =%(writer)s"
+    if filters.get("news_editor"):
+        conditions += " and a.news_editor =%(news_editor)s"
     item_results = frappe.db.sql("""
 				select distinct
+				        a.writer_2 as writer_2,
 						a.Journal_name as Journal_name,
 						a.writer_name as writer_name,
-						(select count(name) from `tabPress Monitoring` w where w.content_overall_rating ='Negative' and a.writer = w.writer and a.Journal_name = w.Journal_name {conditions} ) as number_of_positive_press
+						(select count(name) from `tabPress Monitoring` w where w.content_overall_rating ='Negative' and a.writer = w.writer and a.Journal_name = w.Journal_name {conditions} ) as number_of_negative_press
 				from
 				`tabPress Monitoring` a
 
-				where
-				a.docstatus != 2
-				{conditions}
 
+				where
+				(select count(name) from `tabPress Monitoring` w where w.content_overall_rating ='Negative' and a.writer = w.writer and a.Journal_name = w.Journal_name {conditions} ) > 0
+				and a.docstatus != 2
+				{conditions}
+                ORDER BY number_of_negative_press DESC;
 				""".format(conditions=conditions), filters, as_dict=1)
 
     # price_list_names = list(set([item.price_list_name for item in item_results]))
@@ -96,6 +107,7 @@ def get_item_price_qty_data(filters):
                 'creation': item_dict.creation,
                 'service_classification': item_dict.service_classification,
                 'full_name': item_dict.full_name,
+                'writer_2': item_dict.writer_2
             }
             result.append(data)
 

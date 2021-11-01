@@ -4,7 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class PressMonitoring(Document):
-
-
+class NewsEditor(Document):
 	pass

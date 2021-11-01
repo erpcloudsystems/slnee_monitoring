@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: left;
+  color: white;
+    direction: rtl;
+
+}
+
+
+.centered {
+  position: absolute;
+  top: 65%;
+  left: 19%;
+  transform: translate(-50%, -50%);
+    text-align: left;
+  direction: rtl;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+	<br>
+<img src="/files/4dbd9fa2-bd46-46ba-9f73-2c2eb97a4189.jpg" alt="HTML5 Icon" width="100%" height="980">
+
+  <div class="centered"><h2 class="text-center" style="font-family:Cairo">{%= __("رصد آراء المستفيدين بوسائل التواصل الاجتماعي") %}</h2>
+<br>
+ <div class="centered"><h3 class="text-center" style="font-family:Cairo">
+	<br>
+	{%= __("خلال الفترة من ") %}
+	 {%= frappe.datetime.str_to_user(filters.from_date) %}
+     {%= __("إلى") %}
+	{%= frappe.datetime.str_to_user(filters.to_date) %}
+
+
+</h3>
+ </div>
+</div>
+<br>
+	<hr>
+
+<table class="table table-bordered" style="font-family:Cairo" bgcolor="green" dir="rtl">
+	<thead>
+		    <tr>
+
+			<th class="text-center">{%= __("Agency") %}</th>
+			<th class="text-center">{%= __("Overall Tweet Classification") %}</th>
+			<th class="text-center">{%= __("Tweet Classification") %}</th>
+			<th class="text-center">{%= __("Tweet Subject") %}</th>
+			<th class="text-center">{%= __("Tweet Link") %}</th>
+
+
+		</tr>
+	</thead>
+	<tbody>
+	{% for(var i=0, l=data.length; i<l; i++) { %}
+
+	<tr>
+
+		<td class="text-center">{%= data[i].agency_ %}</td>
+		<td class="text-center">{%= __(data[i].overall_tweet_classification) %}</td>
+		<td class="text-center">{%= data[i].tweet_classification %}</td>
+		<td class="text-center">{%= data[i].tweet_subject %}</td>
+		<td class="text-center">{%= data[i].tweet_link %}</td>
+		<td><a href='test"+{%= data[i].tweet_link %}+".html'>link</a>";
+	</tr>
+	{% } %}
+	</tbody>
+</table>
+<img src="/files/mylast2.PNG" alt="HTML5 Icon" width="100%" height="980">
+
+</body>
+</html>

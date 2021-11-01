@@ -54,8 +54,11 @@ def get_item_price_qty_data(filters):
 				`tabPress Monitoring` a
 
 				where
+				(select count(name) from `tabPress Monitoring` w where w.content_overall_rating ='Positive' and a.Journal_name = w.Journal_name {conditions} ) > 0
+				and
 				a.docstatus != 2
 				{conditions}
+                ORDER BY number_of_positive_press DESC;
 
 				""".format(conditions=conditions), filters, as_dict=1)
 

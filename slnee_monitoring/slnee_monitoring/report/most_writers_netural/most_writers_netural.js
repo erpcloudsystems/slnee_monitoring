@@ -20,10 +20,25 @@ frappe.query_reports["Most writers Netural"] = {
 		},
 
 		{
+			"fieldname":"writer_2",
+			"label": __("Writer 2"),
+			"fieldtype": "Select",
+			"options" : ["","لايوجد","كاتب مقال","محرر صحفى"],
+			"reqd": 0
+		},
+
+		{
 			"fieldname":"writer",
 			"label": __("Writer"),
 			"fieldtype": "Link",
 			"options" : "Writer",
+			"reqd": 0
+		},
+		{
+			"fieldname":"news_editor",
+			"label": __("News Editor"),
+			"fieldtype": "Link",
+			"options" : "News Editor",
 			"reqd": 0
 		}
 	]

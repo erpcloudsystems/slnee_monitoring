@@ -11,18 +11,22 @@ def execute(filters=None):
 	columns = get_columns()
 	data = []
 
-	data = frappe.db.get_all("Agency", filters=filters, fields=["name", "main_classification", "sub_classification"])
-	#press_monitoring = {}
-	for press_monitoring in data:
-		press_monitoring["agency"] = press_monitoring.name
-		press_monitoring["positive"] = frappe.db.count("Press Monitoring", filters={"agency":press_monitoring.name,"content_overall_rating": "Positive"})
-		press_monitoring["neutral"] = frappe.db.count("Press Monitoring", filters={"agency": press_monitoring.name,"content_overall_rating": "Neutral"})
-		press_monitoring["negative"] = frappe.db.count("Press Monitoring", filters={"agency": press_monitoring.name,"content_overall_rating": "Negative"})
+	service_classification = frappe.db.get_all("Press Monitoring", filters=filters, fields=["service_classification"])
+	for s in service_classification:
 
-		chart = get_chart_data(data)
-		report_summary = get_report_summary(data)
 
-	return columns, data, None, chart, report_summary
+		data = frappe.db.get_all("Agency", filters={"name":filters.get("name")}, fields=["name", "main_classification", "sub_classification"])
+		#press_monitoring = {}
+		for press_monitoring in data:
+			press_monitoring["agency"] = press_monitoring.name
+			press_monitoring["positive"] = frappe.db.count("Press Monitoring", filters={"agency": press_monitoring.name, "service_classification": s[0][0], "content_overall_rating": "Positive"})
+			press_monitoring["neutral"] = frappe.db.count("Press Monitoring", filters={"agency": press_monitoring.name, "service_classification": s[0][0], "content_overall_rating": "Neutral"})
+			press_monitoring["negative"] = frappe.db.count("Press Monitoring", filters={"agency": press_monitoring.name, "service_classification": s[0][0], "content_overall_rating": "Negative"})
+
+			chart = get_chart_data(data)
+			report_summary = get_report_summary(data)
+
+		return columns, data, None, chart, report_summary
 
 def get_columns():
 	return [

@@ -134,7 +134,7 @@ def get_item_price_qty_data(filters):
 				`tabPress Monitoring`.docstatus != 2
 				{conditions}
 
-				ORDER BY `tabPress Monitoring`.name desc
+				ORDER BY `tabPress Monitoring`.journal_name ASC
 
 
 				""".format(conditions=conditions), filters, as_dict=1)

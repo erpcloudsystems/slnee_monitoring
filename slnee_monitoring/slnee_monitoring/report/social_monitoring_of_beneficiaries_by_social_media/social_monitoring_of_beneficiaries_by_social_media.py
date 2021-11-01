@@ -16,29 +16,35 @@ def execute(filters=None):
 def get_columns():
     return [
         {
-            "label": _("Writer 2"),
-            "fieldname": "writer_2",
+            "label": _("Agency"),
+            "fieldname": "agency_",
             "fieldtype": "Data",
-            "width": 180
+            "width": 125
         },
         {
-            "label": _("Writer / Editor Name"),
-            "fieldname": "writer_name",
+            "label": _("Overall Tweet Classification"),
+            "fieldname": _("overall_tweet_classification"),
             "fieldtype": "Data",
-            "width": 180
+            "width": 140
         },
+		{
+			"label": _("Tweet Classification"),
+			"fieldname": "tweet_classification",
+			"fieldtype": "Data",
+			"width": 120
+		},
         {
-            "label": _("Journal Name"),
-            "fieldname": "Journal_name",
+            "label": _("Tweet Subject"),
+            "fieldname": _("tweet_subject"),
             "fieldtype": "Data",
-            "width": 180
+            "width": 100
         },
 
         {
-            "label": _("Number of Positive Press"),
-            "fieldname": "number_of_positive_press",
-            "fieldtype": "Int",
-            "width": 180
+            "label": _("Tweet Link"),
+            "fieldname": "tweet_link",
+            "fieldtype": "Data",
+            "width": 200
         }
 
     ]
@@ -53,30 +59,27 @@ def get_data(filters, columns):
 def get_item_price_qty_data(filters):
     conditions = ""
     if filters.get("from_date"):
-        conditions += " and a.publish_date>=%(from_date)s"
+        conditions += " and `tabSocial Media Monitoring`.publish_date>=%(from_date)s"
     if filters.get("to_date"):
-        conditions += " and a.publish_date<=%(to_date)s"
-    if filters.get("writer_2"):
-        conditions += " and a.writer_2 =%(writer_2)s"
-    if filters.get("writer"):
-        conditions += " and a.writer =%(writer)s"
-    if filters.get("news_editor"):
-        conditions += " and a.news_editor =%(news_editor)s"
+        conditions += " and `tabSocial Media Monitoring`.publish_date<=%(to_date)s"
+    if filters.get("agency_"):
+        conditions += " and `tabSocial Media Monitoring`.agency_ =%(agency_)s"
     item_results = frappe.db.sql("""
-				select distinct
-                        a.writer_2 as writer_2,
-						a.Journal_name as Journal_name,
-						a.writer_name as writer_name,
-						(select count(name) from `tabPress Monitoring` w where w.content_overall_rating ='Positive' and a.writer = w.writer and a.Journal_name = w.Journal_name {conditions} ) as number_of_positive_press
+				select
+						`tabSocial Media Monitoring`.agency_ as agency_,
+						`tabSocial Media Monitoring`.overall_tweet_classification as overall_tweet_classification,
+						`tabSocial Media Monitoring`.tweet_classification as tweet_classification,
+						`tabSocial Media Monitoring`.tweet_subject as tweet_subject,
+						`tabSocial Media Monitoring`.tweet_link as tweet_link
+						
 				from
-				`tabPress Monitoring` a
-
+				`tabSocial Media Monitoring` 
 				where
-				(select count(name) from `tabPress Monitoring` w where w.content_overall_rating ='Positive' and a.writer = w.writer and a.Journal_name = w.Journal_name {conditions} ) > 0
-	            and	
-				a.docstatus != 2
+				`tabSocial Media Monitoring`.docstatus != 2
 				{conditions}
-                ORDER BY number_of_positive_press DESC;
+
+				ORDER BY `tabSocial Media Monitoring`.agency_ ASC
+
 
 				""".format(conditions=conditions), filters, as_dict=1)
 
@@ -89,12 +92,12 @@ def get_item_price_qty_data(filters):
     if item_results:
         for item_dict in item_results:
             data = {
+                'agency_': item_dict.agency_,
+                'tweet_classification': item_dict.tweet_classification,
+                'tweet_subject': _(item_dict.tweet_subject),
+                'overall_tweet_classification': _(item_dict.overall_tweet_classification),
+                'tweet_link': item_dict.tweet_link,
 
-                'publish_date': item_dict.publish_date,
-                'Journal_name': item_dict.Journal_name,
-                'number_of_positive_press': item_dict.number_of_positive_press,
-                'writer_name': item_dict.writer_name,
-                'writer_2': item_dict.writer_2
             }
             result.append(data)
 

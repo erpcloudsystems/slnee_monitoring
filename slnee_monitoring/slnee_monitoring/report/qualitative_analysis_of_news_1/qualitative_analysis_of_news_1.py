@@ -79,7 +79,8 @@ def get_item_price_qty_data(filters):
 				`tabPress Monitoring` a
 
 				where
-				a.docstatus != 2
+                (select count(name) from `tabPress Monitoring` e where e.content_overall_rating ='Negative' and a.service_classification = e.service_classification {conditions} )  > 0
+				and a.docstatus != 2
 				{conditions}
 
 				""".format(conditions=conditions), filters, as_dict=1)
