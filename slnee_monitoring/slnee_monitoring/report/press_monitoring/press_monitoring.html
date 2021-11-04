@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: left;
+  color: white;
+    direction: rtl;
+
+}
+
+
+.centered {
+  position: absolute;
+  top: 65%;
+  left: 19%;
+  transform: translate(-50%, -50%);
+    text-align: left;
+  direction: rtl;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+	<br>
+  <div class="centered"><h3 class="text-center" style="font-family:Cairo">{%= __("تصنيف المواد الصحفية المنشوره عن كل جهة ") %}</h3>
+<br>
+ <div class="centered"><h5 class="text-center" style="font-family:Cairo">
+
+
+</h5>
+</div>
+
+</div>
+</div>
+<br>
+
+
+
+
+<hr>
+
+<table class="table table-bordered" style="font-family:Cairo" dir="rtl">
+	<thead>
+		    <tr>
+
+			<th class="text-center">{%= __("Monitoring ID") %}</th>
+			<th class="text-center">{%= __("Workflow State") %}</th>
+			<th class="text-center">{%= __("Publish Date") %}</th>
+			<th class="text-center">{%= __("Content Item") %}</th>
+			<th class="text-center">{%= __("Content Overall Rating") %}</th>
+			<th class="text-center">{%= __("Journal Name") %}</th>
+			<th class="text-center">{%= __("Journal Logo") %}</th>
+			<th class="text-center">{%= __("Url") %}</th>
+			<th class="text-center">{%= __("Writer Name") %}</th>
+			<th class="text-center">{%= __("Agency") %}</th>
+
+	</thead>
+	<tbody>
+	{% for(var i=0, l=data.length; i < l; i++) { %}
+	<tr>
+		<td class="text-center">{%= data[i].name %}</td>
+		<td class="text-center">{%= __(data[i].workflow_state) %}</td>
+		<td class="text-center">{%= data[i].publish_date %}</td>
+		<td class="text-center">{%= data[i].content_item %}</td>
+		<td align="text-center" >{%= data[i].content_overall_rating %}</td>
+		<td align="text-center" >{%= data[i].journal_name %}</td>
+		<td align="text-center" ><img src={%= data[i].journal_logo %} alt="Girl in a jacket" width="80" height="80"></td>
+		<td align="text-center" ><a href={%= data[i].url %}>الرابط</a></td>
+		<td align="text-center" >{%= data[i].writer_name %}</td>
+		<td align="text-center" >{%= data[i].agency %}</td>
+
+
+	</tr>
+	{% } %}
+	</tbody>
+
+</table>
+
+<div class="container">
+	<br><br><br><br><br><br><br><br><br>
+	<p></p>
+<img src="/files/mylast2.PNG" alt="HTML5 Icon" width="100%" height="1000">
+</div>
+</body>
+</html>

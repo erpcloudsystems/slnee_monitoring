@@ -47,6 +47,12 @@ def get_columns():
             "width": 220
         },
         {
+            "label": _("Service Classification"),
+            "fieldname": _("service_classification"),
+            "fieldtype": "Data",
+            "width": 220
+        },
+        {
             "label": _("Journal Name"),
             "fieldname": "journal_name",
             "fieldtype": "Data",
@@ -118,6 +124,7 @@ def get_item_price_qty_data(filters):
 						`tabPress Monitoring`.publish_date as publish_date,
 						`tabPress Monitoring`.content_item as content_item,
 						`tabPress Monitoring`.content_overall_rating as content_overall_rating,
+						`tabPress Monitoring`.service_classification as service_classification,
 						`tabPress Monitoring`.journal_name as journal_name,
 						`tabPress Monitoring`.journal_logo as journal_logo,
 						`tabPress Monitoring`.subject as subject,
@@ -161,6 +168,7 @@ def get_item_price_qty_data(filters):
                 'agency': item_dict.agency,
                 'creation': item_dict.creation,
                 'full_name': item_dict.full_name,
+                'service_classification': item_dict.service_classification,
             }
             result.append(data)
 
