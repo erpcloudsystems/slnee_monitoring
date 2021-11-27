@@ -130,7 +130,8 @@
    "fieldtype": "Data",
    "label": "URL",
    "length": 500,
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "writer_name",
@@ -178,7 +179,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-28 15:58:58.241042",
+ "modified": "2021-11-14 14:02:53.140400",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Press Monitoring",

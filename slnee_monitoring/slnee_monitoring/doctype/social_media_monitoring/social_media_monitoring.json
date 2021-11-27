@@ -67,7 +67,8 @@
    "fieldtype": "Data",
    "in_standard_filter": 1,
    "label": "Tweet Link",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "default": "Today",
@@ -115,7 +116,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-26 13:32:21.279015",
+ "modified": "2021-11-14 14:16:55.938391",
  "modified_by": "Administrator",
  "module": "Slnee Monitoring",
  "name": "Social Media Monitoring",
